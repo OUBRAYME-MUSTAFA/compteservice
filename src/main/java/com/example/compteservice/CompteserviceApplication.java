@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
 import java.util.Date;
 
@@ -19,8 +20,9 @@ public class CompteserviceApplication  {
     }
 
      @Bean
-    CommandLineRunner strat(CompteRepository cpteRepository){
+    CommandLineRunner strat(CompteRepository cpteRepository , RepositoryRestConfiguration resetConfiguration){
         return args -> {
+            resetConfiguration.exposeIdsFor(Compte.class);
             cpteRepository.save(new Compte(null, 903993, new Date(), TypeCompte.COURANT));
             cpteRepository.save(new Compte(null, 888888, new Date(), TypeCompte.EPARGNE));
             cpteRepository.save(new Compte(null, 788477, new Date(), TypeCompte.COURANT));
