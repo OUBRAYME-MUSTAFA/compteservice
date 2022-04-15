@@ -31,5 +31,15 @@ L’objectif est de développer un simple micro-service on utilise Sping-boot po
  
 -----------------------------------
 
--Le patri
+Le patrie 03 : utilisation de SpringDataRest au lieu de RestController pour créer le web service
+
+    
+   ![FindByType](https://user-images.githubusercontent.com/102171461/163606332-0b1d8a1f-5036-411c-b8b0-8a81dabea45a.png)
+
+
+    Alors SpringDataRest offre la possibilité d’utiliser les Projection 
+    
+   ![Projection](https://user-images.githubusercontent.com/102171461/163606031-196bedcc-0e20-4f2c-ad60-0c1139d7412c.png)
+
+
 
